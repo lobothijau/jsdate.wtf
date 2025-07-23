@@ -765,7 +765,7 @@
 
     <div id="quizScreen" class="hidden">
       <div class="progress">
-        Question <span id="currentQuestion">1</span> of <span id="totalQuestions">20</span>
+        Pertanyaan <span id="currentQuestion">1</span> dari <span id="totalQuestions">20</span> soal
       </div>
 
       <div class="code-block-container">
@@ -1004,7 +1004,7 @@
           'Throws an error'
         ],
         correct: 1,
-        explanation: 'The string "0" is interpreted as the year 2000, not as a timestamp!'
+        explanation: 'String "0" dibaca sebagai tahun 2000, bukan sebagai timestamp!'
       },
       {
         code: 'new Date(0)',
@@ -1015,7 +1015,7 @@
           'Throws an error'
         ],
         correct: 0,
-        explanation: 'The <i>number</i> 0, as opposed to the string "0", is interpreted as milliseconds since the Unix epoch (Jan 1, 1970).'
+        explanation: 'Berbeda dengan string "0", <i>Angka</i> 0 dibaca sebagai jumlah milidetik yang sudah lewat sejak 1 Januari 1970 (Unix epoch).'
       },
       {
         code: 'Date.parse(0) === Date.parse("0")',
