@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta property="og:title" content='new Date("wtf")'>
-  <meta property="og:description" content="Seberapa paham kamu akan class Date di JavaScript?">
+  <meta property="og:description" content="Seberapa paham kamu akan penggunaan Date di JavaScript?">
   <meta property="og:url" content="https://jsdate.bagusaji.com">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://jsdate.bagusaji.com/og.png">
@@ -15,7 +15,7 @@
   <meta property="og:site_name" content="jsdate.wtf">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content='new Date("wtf")'>
-  <meta name="twitter:description" content="Seberapa paham kamu akan class Date di JavaScript?">
+  <meta name="twitter:description" content="Seberapa paham kamu akan penggunaan Date di JavaScript?">
   <meta name="twitter:image" content="https://jsdate.bagusaji.com/og.png">
 
   <title>The JavaScript Date Quiz</title>
@@ -746,19 +746,19 @@
       <div class="start-content">
         <header>
           <h1 id="main-title">new Date("wtf")</h1>
-          <p class="subtitle">How well do you know JavaScript's Date class?</p>
+          <p class="subtitle">Seberapa paham kamu akan penggunaan Date di JavaScript??</p>
         </header>
 
         <p class="subsubtitle">
-          All questions verified using NodeJS 24.4.0 on
-          a MacBook Pro set to the BST timezone (UTC+1).
+          Semua pertanyaan telah diverifikasi dengan NodeJS 24.4.0 
+          pada sebuah MacBook Pro yang menggunakan timezone BST (UTC+1)
         </p>
-        <button class="button" onclick="startQuiz()">Start Quiz</button>
+        <button class="button" onclick="startQuiz()">Mulai</button>
       </div>
 
       <div class="footer">
         <p>
-          made with ❤️ by <a href="https://samwho.dev" target="_blank" rel="noopener">samwho</a>
+          translated with ❤️ by <a href="https://bagusaji.com" target="_blank" rel="noopener">Bagus Aji</a> from original works by <a href="https://samwho.dev" target="_blank" rel="noopener">samwho</a>
         </p>
       </div>
     </div>
@@ -775,11 +775,11 @@
 
       <div class="options" id="options"></div>
 
-      <button id="nextButton" class="button hidden" onclick="nextQuestion()">Next Question</button>
+      <button id="nextButton" class="button hidden" onclick="nextQuestion()">Berikutnya</button>
     </div>
 
     <div id="resultsScreen" class="results-screen hidden">
-      <h2>You got to the end!</h2>
+      <h2>Selesai!</h2>
       <div class="score">
         <span id="correctCount">0</span> / <span id="totalCount">0</span>
       </div>
@@ -814,7 +814,7 @@
       </div>
       <div class="footer">
         <p>
-          made with ❤️ by <a href="https://samwho.dev" target="_blank" rel="noopener">samwho</a>
+          translated with ❤️ by <a href="https://bagusaji.com" target="_blank" rel="noopener">Bagus Aji</a> from original works by <a href="https://samwho.dev" target="_blank" rel="noopener">samwho</a>
         </p>
       </div>
     </div>
@@ -1038,7 +1038,7 @@
           'Throws an error'
         ],
         correct: 2,
-        explanation: 'Invalid Date tetap sebuah ojbek Date! Bukan null maupun error.'
+        explanation: 'Invalid Date tetap sebuah objek Date! Bukan null maupun error.'
       },
       {
         code: 'new Date("not a date").getTime()',
@@ -1127,7 +1127,7 @@
           'NaN'
         ],
         correct: 0,
-        explanation: '"99" adalah tahu 1999, sementara "100" adalah tahun 0100. 1999 > 0100! Date mulai mengartikan angka sebagai tahun mulai dari "32".'
+        explanation: '"99" adalah tahun 1999, sementara "100" adalah tahun 0100. 1999 > 0100! Date mulai mengartikan angka sebagai tahun mulai dari "32".'
       },
       {
         code: 'new Date("49") > new Date("50")',
@@ -1216,7 +1216,7 @@
           '2010-05-01T00:00:00.000Z'
         ],
         correct: 2,
-        explanation: '"fourth of" diabagikan sehingga teks di atas tetap dibaca sebagai "may 2010" dan lagi-lagi mengacu pada timezone lokal.',
+        explanation: '"fourth of" diabaikan sehingga teks di atas tetap dibaca sebagai "may 2010" dan lagi-lagi mengacu pada timezone lokal.',
       },
       {
         code: 'new Date("May 4 UTC")',
@@ -1249,7 +1249,7 @@
           'Throws an error'
         ],
         correct: 2,
-        explanation: 'Menit juga bisa diproses!',
+        explanation: 'Timezone dengan menit juga bisa diproses!',
       },
       {
         code: 'new Date("May 4 UTC+1:60")',
@@ -1260,7 +1260,7 @@
           '1960-05-03T23:00:00.000Z'
         ],
         correct: 3,
-        explanation: 'Sebelum 60 angka setelah : dianggap sebagai menit, lebih dari itu akan dianggap sebagai tahun.',
+        explanation: 'Angka setelah tanda : dianggap sebagai menit selama kurang dari 60, lebih dari itu akan dianggap sebagai tahun.',
       },
       {
         code: 'new Date("1990 2010")',
@@ -1304,7 +1304,7 @@
           'Invalid Date'
         ],
         correct: 0,
-        explanation: 'I couldn\'t resist. -[] is coerced to 0, which is interpreted as milliseconds since the Unix epoch (Jan 1, 1970).'
+        explanation: 'Tanda -[] oleh JavaScript diproses menjadi 0 (istilahnya coerced), sehingga dihitung sebagai milidetik setelah Unix epoch (1 Januari 1970).'
       }
     ];
 
@@ -1433,24 +1433,24 @@
       let message = '';
 
       if (percentage > 100) {
-        message = 'You figured out how to hack the score, nice work!';
+        message = 'Bisa aja ngakalin skornya!';
       } else if (percentage === 100) {
-        message = 'Congrats, you cheated!';
+        message = 'Kamu nyontek yaa?';
       } else if (percentage >= 80) {
-        message = 'It\'s concerning how well you know the JavaScript Date class.';
+        message = 'Kamu bisa paham kelas Date di JavaScript dengan baik, keren banget!';
       } else if (percentage >= 60) {
-        message = 'Good score! Now you just have to ask yourself why you know this much about the JavaScript Date class.';
+        message = 'Skor yang bagus! Sekarang tanyakan kenapa kamu bisa sepaham ini?';
       } else if (percentage >= 25) {
-        message = 'It\'s okay, Temporal is coming soon anyway.';
+        message = 'Tidak apa-apa, sebentar lagi Temporal dirilis kok.';
       } else if (percentage >= 0) {
-        message = 'You would have scored higher by guessing at random.';
+        message = 'Kamu akan dapat skor lebih tinggi kalau menjawab secara acak.';
       } else if (percentage < 0) {
-        message = 'The smart people that figured out how to hack the score gave themselves values above 0, doofus.';
+        message = 'Orang-orang pintar yang ngakalin skornya kita beri nilai 0, 👎';
       }
 
       document.getElementById('resultMessage').textContent = message;
 
-      const shareText = `I scored ${score}/${questions.length} on https://jsdate.wtf and all I got was this lousy text to share on social media.`;
+      const shareText = `Saya berhasil menjawab ${score} dari ${questions.length} soal di https://jsdate.bagusaji.dev, capek-capek jawab cuma dapat dapet teks ini doang buat di share di sosmed.`;
       document.getElementById('shareMessage').textContent = shareText;
 
       window.history.replaceState({}, '', window.location.pathname);
@@ -1459,7 +1459,7 @@
     function copyShareMessage() {
       const shareMessage = document.getElementById('shareMessage').textContent;
       navigator.clipboard.writeText(shareMessage);
-      showToast('Results copied to clipboard!');
+      showToast('Berhasil disalin!');
     }
 
     function shareResults() {
@@ -1471,7 +1471,7 @@
         });
       } else {
         navigator.clipboard.writeText(shareMessage);
-        showToast('Results copied to clipboard!');
+        showToast('Berhasil di salin!');
       }
     }
 
